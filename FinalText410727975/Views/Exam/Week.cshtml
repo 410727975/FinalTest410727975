@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Week";
+}
+
+<h2>查詢對應星期</h2>
+@using (Html.BeginForm("Week", "Exam", FormMethod.Post))
+{
+<p>
+    請輸入數字：@Html.TextBox(name: "number")
+    <input type="submit" value="查詢" />
+</p>
+    if (ViewBag.result != "")
+    {
+        <p>查詢結果：@(ViewBag.result)</p>
+
+    }
+}
+
